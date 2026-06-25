@@ -1,0 +1,9 @@
+{
+  "id": "sticky-properties",
+  "name": "Sticky Properties",
+  "version": "1.0.0",
+  "minAppVersion": "1.4.0",
+  "description": "Add a configurable set of properties to every new note. Right-click any property to make it stick to future notes.",
+  "author": "betweenwinters",
+  "isDesktopOnly": false
+}
