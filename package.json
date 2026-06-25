@@ -1,0 +1,25 @@
+{
+  "name": "obsidian-sticky-properties",
+  "version": "1.0.0",
+  "description": "Add a configurable set of properties to every new note in Obsidian. Right-click any property to make it stick to future notes.",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node esbuild.config.mjs",
+    "build": "node esbuild.config.mjs production"
+  },
+  "keywords": [
+    "obsidian",
+    "obsidian-plugin",
+    "properties",
+    "frontmatter"
+  ],
+  "author": "yaye.work",
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.21.5"
+  },
+  "dependencies": {
+    "monkey-around": "^2.3.0"
+  }
+}
