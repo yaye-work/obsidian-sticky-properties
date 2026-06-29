@@ -21,7 +21,7 @@ Mark a property as "sticky" once, and it shows up on every note you make from th
 
 ### Tips
 
-- For a **Date & time** property, use `now` as the default to stamp the creation timestamp (e.g. `2026-06-25T13:00:00`).
+- For a **Date** or **Date & time** property, use `now` (or `today`) as the default to stamp the creation date/timestamp (e.g. `2026-06-25T13:00:00`). Leave the default **blank** to add an empty date property to fill in manually later.
 - For a **List** property, separate default values with commas, or leave it blank for an empty list to fill in later.
 
 ## Installation

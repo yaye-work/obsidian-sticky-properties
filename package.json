@@ -1,6 +1,6 @@
 {
   "name": "obsidian-sticky-properties",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Add a configurable set of properties to every new note in Obsidian. Right-click any property to make it stick to future notes.",
   "main": "main.js",
   "type": "module",

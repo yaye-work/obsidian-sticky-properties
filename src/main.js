@@ -21,14 +21,17 @@ function computeValue(prop) {
   const lower = raw.toLowerCase();
   switch (prop.type) {
     case "datetime":
-      if (raw === "" || lower === "now") {
+      if (lower === "now") {
         return window.moment().format("YYYY-MM-DDTHH:mm:ss");
       }
+      // Blank means an empty date property to fill in manually later.
+      if (raw === "") return null;
       return raw;
     case "date":
-      if (raw === "" || lower === "now" || lower === "today") {
+      if (lower === "now" || lower === "today") {
         return window.moment().format("YYYY-MM-DD");
       }
+      if (raw === "") return null;
       return raw;
     case "number": {
       const n = Number(raw);
@@ -192,7 +195,7 @@ class StickyPropertiesSettingTab extends PluginSettingTab {
     containerEl.empty();
 
     containerEl.createEl("p", {
-      text: "These properties are added to every new note. For Date/Date & time, use \"now\" (or \"today\") to stamp the moment the note is created. For List, separate default values with commas.",
+      text: "These properties are added to every new note. For Date/Date & time, use \"now\" (or \"today\") to stamp the moment the note is created, or leave the default blank to add an empty date to fill in later. For List, separate default values with commas.",
       cls: "setting-item-description",
     });
 
@@ -263,7 +266,7 @@ class StickyPropertiesSettingTab extends PluginSettingTab {
     switch (type) {
       case "datetime":
       case "date":
-        return 'Default value (or "now")';
+        return '"now", a date, or blank for empty';
       case "list":
         return "Comma-separated defaults (optional)";
       case "number":
